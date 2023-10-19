@@ -67,12 +67,3 @@ class _MyAppState extends State<MyApp> {
     );
   }
 }
-
-//Simulate a long-running task with an Isolate
-void performHeavyTaskWithIsolate(SendPort sendPort) {
-  for (int i = 0; i < 5000; i++) {
-    debugPrint('$i');
-  }
-  //Notify the main isolate that the task is complete
-  sendPort.send('Task completed');
-}

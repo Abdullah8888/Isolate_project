@@ -52,13 +52,6 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  //Simulate a long-running task without an Isolate
-  void performHeavyTaskWithoutIsolate() {
-    for (int i = 0; i < 5000; i++) {
-      debugPrint('$i');
-    }
-  }
-
   Widget _buildMarquee() {
     return Marquee(
       text: 'Isolates are used for concurrent and parallel processing',

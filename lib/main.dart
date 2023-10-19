@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
           color: Colors.blue,
 
           child: FloatingActionButton.extended(
-            onPressed: () async {
+            onPressed: () {
               performHeavyTaskWithoutIsolate();
             },
             label: const Text('Perfom heavy task'),

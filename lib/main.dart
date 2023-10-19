@@ -35,13 +35,7 @@ class _MyAppState extends State<MyApp> {
 
           child: FloatingActionButton.extended(
             onPressed: () async {
-              ReceivePort receivePort = ReceivePort();
-              Isolate.spawn(performHeavyTaskWithIsolate, receivePort.sendPort);
-
-              // Listen for messages from the spawned isolate
-              receivePort.listen((message) {
-                debugPrint('$message');
-              });
+              performHeavyTaskWithoutIsolate();
             },
             label: const Text('Perfom heavy task'),
             backgroundColor: Colors.pink,
